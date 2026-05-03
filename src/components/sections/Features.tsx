@@ -1,4 +1,4 @@
-import { Battery, Map, BarChart, Shield, Zap, Clock } from 'lucide-react'
+import { Battery, Map, BarChart, Shield, Zap, Clock, LogIn, Fingerprint, Users, BellRing } from 'lucide-react'
 
 const features = [
   {
@@ -30,6 +30,26 @@ const features = [
     title: "Flexible Policy Controls",
     description: "Adjust adoption rates and simulation parameters on the fly. Test policy impacts before implementation.",
     icon: <Clock size={32} className="text-cyan-400" />
+  },
+  {
+    title: "Google Authentication",
+    description: "One-tap signup and login with Google keeps onboarding fast for operators and individual users alike.",
+    icon: <LogIn size={32} className="text-cyan-400" />
+  },
+  {
+    title: "OTP Verification",
+    description: "An extra verification step protects new signups and strengthens account recovery for sensitive access.",
+    icon: <Fingerprint size={32} className="text-cyan-400" />
+  },
+  {
+    title: "Operator and User Paths",
+    description: "Separate onboarding and profile journeys keep operator controls and personal charging preferences distinct.",
+    icon: <Users size={32} className="text-cyan-400" />
+  },
+  {
+    title: "Alerts and Recovery",
+    description: "Security-focused alerts, password reset support, and profile verification reduce account friction.",
+    icon: <BellRing size={32} className="text-cyan-400" />
   }
 ]
 

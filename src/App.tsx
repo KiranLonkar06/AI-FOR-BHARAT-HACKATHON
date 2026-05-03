@@ -16,6 +16,7 @@ const ProblemSolution = lazy(() => import('./components/sections/ProblemSolution
 const HowItWorks = lazy(() => import('./components/sections/HowItWorks'))
 const LiveDemo = lazy(() => import('./components/sections/LiveDemo'))
 const ImpactMetrics = lazy(() => import('./components/sections/ImpactMetrics'))
+const ExtraSections = lazy(() => import('./components/sections/ExtraSections'))
 const CTA = lazy(() => import('./components/sections/CTA'))
 const Features = lazy(() => import('./components/sections/Features'))
 
@@ -52,6 +53,11 @@ function Landing() {
         <ImpactMetrics />
       </Suspense>
 
+      {/* 5b. Security, tech stack & ROI */}
+      <Suspense fallback={<div>Loading...</div>}>
+        <ExtraSections />
+      </Suspense>
+
       {/* 6. CTA & Footer */}
       <Suspense fallback={<div>Loading...</div>}>
         <CTA />
@@ -85,7 +91,7 @@ function AppRoutes() {
   return (
     <Routes>
       <Route path="/" element={<Landing />} />
-      <Route path="/login" element={token ? <Navigate to="/dashboard" /> : <Login />} />
+      <Route path="/login" element={token ? <Navigate to="/profile" /> : <Login />} />
       <Route path="/signup" element={<Navigate to="/login?mode=signup" replace />} />
       <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
       <Route path="/settings" element={<ProtectedRoute><Settings /></ProtectedRoute>} />

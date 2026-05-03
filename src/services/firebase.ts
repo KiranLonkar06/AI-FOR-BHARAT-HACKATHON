@@ -1,5 +1,5 @@
 import { initializeApp, getApps } from 'firebase/app';
-import { getAuth } from 'firebase/auth';
+import { GoogleAuthProvider, getAuth } from 'firebase/auth';
 
 // ─── Firebase Config ─────────────────────────────────────────────────────────
 // Fill in your Firebase project values in .env.local (see .env.example)
@@ -19,4 +19,5 @@ const isConfigValid = Object.values(firebaseConfig).every(value => value && valu
 const app = isConfigValid && getApps().length === 0 ? initializeApp(firebaseConfig) : getApps()[0];
 
 export const auth = isConfigValid ? getAuth(app) : null;
+export const googleProvider = new GoogleAuthProvider();
 export default app;

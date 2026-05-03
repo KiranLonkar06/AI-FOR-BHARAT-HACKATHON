@@ -7,6 +7,10 @@ export default defineConfig({
   server: {
     host: true,
     allowedHosts: ['all'],
+    headers: {
+      'Cross-Origin-Opener-Policy': 'same-origin-allow-popups',
+      'Cross-Origin-Embedder-Policy': 'unsafe-none',
+    },
   },
   build: {
     chunkSizeWarningLimit: 5000,
