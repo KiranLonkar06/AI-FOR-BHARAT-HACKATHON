@@ -6,7 +6,7 @@ export default function Footer() {
     { title:'Legal',    links:['Privacy Policy','Terms of Service','Data Processing (DPA)','Cookie Policy','Security'] },
   ]
   return (
-    <footer style={{
+    <footer id="contact" style={{
       borderTop:'1px solid rgba(255,255,255,0.06)',
       background:'#080c12',
       padding:'64px 6% 36px',

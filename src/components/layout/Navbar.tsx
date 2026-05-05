@@ -36,11 +36,10 @@ export default function Navbar() {
       ) : (
         <>
           <ul className="nav-links">
-            <li><a href="#demo" id="nav-demo">Live Demo</a></li>
-            <li><a href="#problem" id="nav-problem">Platform</a></li>
-            <li><a href="#metrics" id="nav-metrics">Metrics</a></li>
-            <li><a href="#roi" id="nav-roi">ROI</a></li>
-            <li><a href="#usecases" id="nav-cases">Use Cases</a></li>
+            <li><Link to="/" id="nav-home">Home</Link></li>
+            <li><a href="#features" id="nav-features">Platform</a></li>
+            <li><a href="#how" id="nav-how">How It Works</a></li>
+            <li><a href="#contact" id="nav-contact">Contact</a></li>
           </ul>
           <div className="nav-end">
             <Link to="/login?mode=login" className="btn btn-outline btn-sm" id="nav-login">

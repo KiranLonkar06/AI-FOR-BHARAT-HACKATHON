@@ -14,10 +14,6 @@ import { SystemStateProvider } from './context/SystemStateContext'
 
 const ProblemSolution = lazy(() => import('./components/sections/ProblemSolution'))
 const HowItWorks = lazy(() => import('./components/sections/HowItWorks'))
-const LiveDemo = lazy(() => import('./components/sections/LiveDemo'))
-const ImpactMetrics = lazy(() => import('./components/sections/ImpactMetrics'))
-const ExtraSections = lazy(() => import('./components/sections/ExtraSections'))
-const CTA = lazy(() => import('./components/sections/CTA'))
 const Features = lazy(() => import('./components/sections/Features'))
 
 function Landing() {
@@ -43,25 +39,7 @@ function Landing() {
         <HowItWorks />
       </Suspense>
 
-      {/* 4. Live Demo */}
-      <Suspense fallback={<div>Loading...</div>}>
-        <LiveDemo />
-      </Suspense>
-
-      {/* 5. Impact Metrics */}
-      <Suspense fallback={<div>Loading...</div>}>
-        <ImpactMetrics />
-      </Suspense>
-
-      {/* 5b. Security, tech stack & ROI */}
-      <Suspense fallback={<div>Loading...</div>}>
-        <ExtraSections />
-      </Suspense>
-
-      {/* 6. CTA & Footer */}
-      <Suspense fallback={<div>Loading...</div>}>
-        <CTA />
-      </Suspense>
+      {/* Footer */}
       <Footer />
     </>
   )
